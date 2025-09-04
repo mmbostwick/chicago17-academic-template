@@ -32,11 +32,11 @@
 \usepackage{indentfirst}    % Indents first paragraph line after section headers.
 
 %%%%% Font Encoding & Typographic Settings
-\usepackage[T1]{fontenc}    % T1 font encoding for better handling languages
+\usepackage[LGR,T1]{fontenc}    % T1 font encoding for better handling languages
 \usepackage{cfr-lm}         % Old Style Numbers: fun look but sometimes creates latex errors with language settings.
 
 %%%%% Great serif font choices for academic writing, pick one:
-%\usepackage{lmodern}       % Latin Modern Roman: Like Century (standard but beautiful)
+\usepackage{lmodern}       % Latin Modern Roman: Like Century (standard but beautiful)
 %\usepackage{mlmodern}      % Blacker version of lmodern
 %\usepackage{OldStandard}   % Old Standard TT: classical serif font, inspired by 19th century typefaces
 %\usepackage{TheanoDidot}   % Theano Didot: elegant Didone serif font inspired by classic Didot typefaces
@@ -64,7 +64,7 @@
 
 %%%%% Language Configuration:  Comment out if not necessary
 \usepackage[greek,english]{babel}   % Enables Greek text support.
-\usepackage{cjhebrew}               % Enables Hebrew support.
+%\usepackage{cjhebrew}               % Enables Hebrew support.
 
 %%%%% Typsetting Flexibility: Uncomment to fix typesetting issues
 %\sloppy                     % Allows LaTeX more freedom to stretch lines
@@ -76,7 +76,7 @@
 \usepackage{csquotes}       % Enables \enquote{} and smart quote localization
 %\usepackage[hang,flushmargin]{footmisc} % Optional, for footnote formatting, less indent.
 \usepackage[hang,flushmargin]{footmisc} % hanging indent and removes the extra indent to the first line of footnotes so the number and text align at the left margin.
-\setlength{\footnotemargin}{0.5em} % Set to 0.5 for the margin in the footnote.  You can change to 1 to make it larger.
+\setlength{\footnotemargin}{0.77em} % Set to 0.5 for the margin in the footnote.  You can change to 1 to make it larger.
 
 %%%%% For fixing unbounded URLs: Comment out if not necessary
 \usepackage{xurl}          % break long URLs across lines in footnotes and bibliography
@@ -84,6 +84,15 @@
 
 %%%%% For Graphics:  Enable, if necessary.
 %\usepackage{graphicx}       % Enables image support
+
+%%%%% For Tables:  Enable, if necessary.
+\usepackage{booktabs}
+\usepackage{tabularx, array, xcolor, float} % preamble
+
+\usepackage{array}     % for >{\raggedright\arraybackslash}
+\usepackage[table]{xcolor} % for coloring table cells
+
+\usepackage{comment}  % put this in your preamble
 
 %%%%%%%%%%%%%%% Document Configuration & Redefinitions %%%%%%%%%%%%%%%
 
