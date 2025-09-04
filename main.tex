@@ -1,0 +1,66 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chicago 17 main.text file for Academic Papers.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% main.tex Overview:
+%   \documentclass{chicago17} % Loads definitions & packages 
+%   \begin{document}
+%   \printtitlepage     % Title page
+%   \papercontents      % Optional Table of Contents
+%   \content            % Your content goes here!
+%   \printbibliography  % Prints biography
+%   \end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%% Basic Configuration %%%%%%%%%%%%%%% 
+% All the packages and configuration are loaded in the chicago17.cls file.
+% For cleanness and simplicty, almost everything happens there!
+\documentclass{chicago17}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%  Title Page %%%%%%%%%%%%%%% 
+% Set your variables for the title page:
+\newcommand{\Title}{[PAPER TITLE (CAPS)]}
+\newcommand{\Subtitle}{[SUB TITLE]}
+\newcommand{\Course}{[Course ID and Name]}
+\newcommand{\Author}{[Author Name]}
+\newcommand{\Date}{\today}  % Feel free to remove \today and your own date.
+
+% Create the title page using the above variables:
+\printtitlepage
+
+%%%%%%%%%%%%%%%  Table of Contents %%%%%%%%%%%%%%% 
+% Uncomment the following to get a table of contents:
+%\papercontents
+
+%%%%%%%%%%%%%%%  Main Content %%%%%%%%%%%%%%%
+\content
+
+% Your paper goes here:
+
+\section{Section (Level 1): Formatting \& Content Tests}
+
+\subsection{Subsection (Level 2): Chicago Footnotes}
+If you wish to do a Chicago style footnote, use \texttt{\textbackslash autocite}.  Here is an example: \enquote{good night moon.}\autocite[7]{brown_goodnight_moon} 
+
+\subsection{Subsection (Level 2): Chicago Quotes}
+Use \texttt{\textbackslash enquote} or other standard \LaTeX command if you are doing a short quote.  You'll want the quotation marks.  Here is an example (with footnote), \enquote{see Spot run!}\autocite[8]{gray_fun_with_dick_jane}  
+
+If you wish to do a longer quote, use \texttt{\textbackslash chicagoblock}. Here is an example quoting from Purdue OWL recommendations for Chicago 17:
+\chicagoblock{Text should be consistently double-spaced, except for block quotations, notes, bibliography entries, table titles, and figure captions. For block quotations, which are also called extracts.  Text should be consistently double-spaced, except for block quotations, notes, bibliography entries, table titles, and figure captions. For block quotations, which are also called extracts A prose quotation of five or more lines, or more than 100 words, should be blocked.
+CMOS recommends blocking two or more lines of poetry. A blocked quotation does not get enclosed in quotation marks. A blocked quotation must always begin a new line.  Blocked quotations should be indented with the word processor’s indention tool.\footnote{Formatting note, I have removed the bullet points, opting for a block of text. \autocite{purdueowl_chicago_format}.}}
+
+\subsubsection{Subsubsection (Level 3): Language Tests}
+Here is some Greek:\textgreek{Ἐν ἀρχῇ ἦν ὁ λόγος}.\footnote{Jn. 1:1}  Here is some Hebrew:  \cjRL{bd'} 
+
+Best wishes with your paper!  Enjoy the process and have fun!
+
+\pagebreak
+
+%%%%%%%%%%%%%%%  Bibliography %%%%%%%%%%%%%%% 
+% Command to Create Bibliography
+\printbibliography
+
+\end{document}
